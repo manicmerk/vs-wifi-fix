@@ -1,0 +1,14 @@
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\ActionLog.txt
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\MostRecentWifiLog.txt
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.exe
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.deps.json
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.runtimeconfig.json
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.runtimeconfig.dev.json
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.dll
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Release\netcoreapp3.1\vs-wifi-fix.pdb
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.AssemblyInfoInputs.cache
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.AssemblyInfo.cs
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.csproj.CoreCompileInputs.cache
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.dll
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.pdb
+D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Release\netcoreapp3.1\vs-wifi-fix.genruntimeconfig.cache

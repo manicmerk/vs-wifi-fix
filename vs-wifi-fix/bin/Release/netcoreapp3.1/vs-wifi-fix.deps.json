@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "vs-wifi-fix/1.0.0": {
+        "runtime": {
+          "vs-wifi-fix.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "vs-wifi-fix/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
