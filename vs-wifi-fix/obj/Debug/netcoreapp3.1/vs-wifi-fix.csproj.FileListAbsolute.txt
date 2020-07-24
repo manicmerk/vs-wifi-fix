@@ -11,5 +11,4 @@ D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Debug\netcoreapp3.1\vs-wifi-fix.
 D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Debug\netcoreapp3.1\vs-wifi-fix.pdb
 D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Debug\netcoreapp3.1\vs-wifi-fix.genruntimeconfig.cache
 D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Debug\netcoreapp3.1\ActionLog.txt
-D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\bin\Debug\netcoreapp3.1\MostRecentWifiLog.txt
 D:\My Files\Desktop\vs-wifi-fix\vs-wifi-fix\obj\Debug\netcoreapp3.1\vs-wifi-fix.csprojAssemblyReference.cache
