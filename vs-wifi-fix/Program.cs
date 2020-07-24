@@ -98,13 +98,15 @@ namespace Wi_Fi_Drop_Fix
                         {
                             Console.WriteLine("You can now detect wireless routers.");
                             ToggleOn(adapter);
-                            // Log event to log file.
+                            string log = DateTime.Now.ToString() + " Turned WiFi Connectivity On for " + adapter + "\r\n";
+                            File.AppendAllText("ActionLog.txt", log);
                         }
                         else if (outcome == "OFF")
                         {
                             ToggleOff(adapter);
                             Console.WriteLine("You are connected to wireless but unable to detect new routers.");
-                            // Log event to log file.
+                            string log = DateTime.Now.ToString() + " Turned WiFi Connectivity Off " + adapter + "\r\n";
+                            File.AppendAllText("ActionLog.txt", log);
                         }
                     }
 
