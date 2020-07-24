@@ -51,28 +51,68 @@ namespace Wi_Fi_Drop_Fix
                         string useRecent = GetUserInput();
                         Console.WriteLine("\n " + useRecent + "? Hit ENTER to confirm.");
                         Console.ReadLine();
-                        string adapter = mostRecentWifi;
+                        if (useRecent == "YES" && outcome == "ON")
+                        { 
+                            string adapter = mostRecentWifi;
+                            Console.WriteLine("You can now detect wireless routers.");
+                            ToggleOn(adapter);
+                            // Pretty sure I could make a method for all of these log statements, and possibly log in a simpler fashion... but this works, not DRY, but it works.
+                            string log = DateTime.Now.ToString() + " Turned WiFi Connectivity On for " + adapter + "\r\n";
+                            File.AppendAllText("ActionLog.txt", log);
+                        }
+                        else if (useRecent == "YES" && outcome == "OFF")
+                        {
+                            string adapter = mostRecentWifi;
+                            Console.WriteLine("You are connected to wireless but unable to detect new routers.");
+                            ToggleOff(adapter);
+                            string log = DateTime.Now.ToString() + " Turned WiFi Connectivity Off for " + adapter + "\r\n";
+                            File.AppendAllText("ActionLog.txt", log);
+                        }
+                        else if (useRecent == "NO")
+                        {
+                            Console.Write("\n Enter your Wi-Fi adapter name here: ");
+                            string adapter = GetUserInput();
+                            File.WriteAllText("MostRecentWifiLog.txt", adapter);
+                            if (outcome == "ON")
+                            {
+                                Console.WriteLine("You can now detect wireless routers.");
+                                ToggleOn(adapter);
+                                string log = DateTime.Now.ToString() + " Turned WiFi Connectivity On for " + adapter + "\r\n";
+                                File.AppendAllText("ActionLog.txt", log);
+                            }
+                            else if (outcome == "OFF")
+                            {
+                                ToggleOff(adapter);
+                                Console.WriteLine("You are connected to wireless but unable to detect new routers.");
+                                string log = DateTime.Now.ToString() + " Turned WiFi Connectivity Off " + adapter + "\r\n";
+                                File.AppendAllText("ActionLog.txt", log);
+                            }
+                        }
                     }
                     else
                     {
                         Console.Write("\n Enter your Wi-Fi adapter name here: ");
                         string adapter = GetUserInput();
                         File.WriteAllText("MostRecentWifiLog.txt", adapter);
-                    }                  
+                        if (outcome == "ON")
+                        {
+                            Console.WriteLine("You can now detect wireless routers.");
+                            ToggleOn(adapter);
+                            // Log event to log file.
+                        }
+                        else if (outcome == "OFF")
+                        {
+                            ToggleOff(adapter);
+                            Console.WriteLine("You are connected to wireless but unable to detect new routers.");
+                            // Log event to log file.
+                        }
+                    }
 
-                    if (outcome == "ON")
-                    {
-                        Console.WriteLine("You can now detect wireless routers.");
-                        ToggleOn(adapter);
-                        // Log event to log file.
-                    }
-                    else if (outcome == "OFF")
-                    {
-                        ToggleOff(adapter);
-                        Console.WriteLine("You are connected to wireless but unable to detect new routers.");
-                        // Log event to log file.
-                    }
-                    
+
+
+                    // Currently stuck with the adapter variable being outside of the scope of my preceeding if/else statement but having trouble identifying how to bring them within the correct scope, or moving the adapter variable effectively outside of the if/else block?
+
+
 
                 }
 
