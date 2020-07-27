@@ -21,7 +21,7 @@ namespace Wi_Fi_Drop_Fix
                 Console.ReadLine();
 
                 Console.WriteLine("\n Do you want to toggle AutoConfig setting for your Wi-Fi Adapter?");
-                Console.Write("\n Please input On, Off, Help or Quit? ");
+                Console.Write("\n Please input On, Off, Log, Help or Quit? ");
 
                 string outcome = GetUserInput();
 

@@ -1,6 +1,6 @@
 The NetGear A7000 Dropped Packed Fix (Also a general fix for dropped packets, or at least an option to see if it solves your problem if you're having buffering issues during gameplay, zoom meetings, etc.)
 
-This wifi adapter is supposed to be an answer to your problems of low wifi connectivity, but instead you're getting insane packet loss every 20-30 seconds you say? Your video conferences got you down with a frown when you're always playing catchup? Well the internet helped me find a fix, and now I'm trying to create a simple tool to automate an obnoxious process for a problem that shouldn't even exist!
+Your wifi adapter is supposed to be an answer to your problems of low wifi connectivity, but instead you're getting insane packet loss every 20-30 seconds you say? Your video conferences got you down with a frown when you're always playing catchup? Well the internet helped me find a fix, and now I'm trying to create a simple tool to automate an obnoxious process for a problem that shouldn't even exist!
 
 Basically... everytime your adapter is scanning for wifi access points, for no apparent reason, it drops a crap ton of packets pushing your ping through the roof! Well worry no more, because before you know it you'll be smooth surfing the web in no time flat. This little toggle should take all the pain out of your games, conferences and YouTube-explorations!
 
