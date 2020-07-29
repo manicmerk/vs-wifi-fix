@@ -52,7 +52,7 @@ namespace Wi_Fi_Drop_Fix
                         Console.WriteLine("\n " + useRecent + "? Hit ENTER to confirm.");
                         Console.ReadLine();
                         if (useRecent == "YES" && outcome == "ON")
-                        { 
+                        {
                             string adapter = mostRecentWifi;
                             Console.WriteLine("You can now detect wireless routers.");
                             ToggleOn(adapter);
@@ -118,18 +118,30 @@ namespace Wi_Fi_Drop_Fix
 
                 }
 
-                // Can't figure out a way to make the console open the picture in image viewer?? Non essential to completion, fix if time permits.
+                //Can't figure out a way to make the console open the picture in image viewer?? Non essential to completion, fix if time permits.
                 //else if (outcome == "HELP")
                 //{
                 //    string currentDirectory = Directory.GetCurrentDirectory();
                 //    DirectoryInfo directory = new DirectoryInfo(currentDirectory);
-                //    string helpFile = Path.Combine(directory + "\\Capture.JPG");
-                //    Process.Start("CMD.exe", helpFile);
+                //    string helpFile = (directory + @"\Capture.JPG");
+                //    //Process.Start(directory + @"\Capture.JPG");
 
-                //    File.Open("capture.jpg", FileMode.Open, FileAccess.ReadWrite);
+
+                //    File.Open("Capture.JPG", FileMode.Open);
+
+                //    string help = Path.GetFullPath(@"cd /d " + @directory + @"\Capture.JPG");
+                //    File.Open(help, FileMode.Open);
+                //    Process.Start("CMD.exe", help);
+                //    Process.Start("CMD.exe", @"\Capture.JPG");
                 //}
 
-                else if (outcome == "QUIT") 
+                else if (outcome == "LOG")
+                {
+                    string actionLog = File.ReadAllText("ActionLog.txt");
+                    Console.WriteLine(actionLog);
+                }
+
+                else if (outcome == "QUIT")
                 {
                     Console.WriteLine("\n Goodbye!");
                     Environment.Exit(0);
