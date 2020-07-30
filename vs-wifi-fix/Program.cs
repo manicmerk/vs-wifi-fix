@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Diagnostics;
 using System.ComponentModel.Design;
+using System.Text.RegularExpressions;
 
 namespace Wi_Fi_Drop_Fix
 {
@@ -27,17 +28,6 @@ namespace Wi_Fi_Drop_Fix
 
                 Console.WriteLine("\n " + outcome + "? Press ENTER to continue.");
                 Console.ReadLine();
-
-                // Code I was attempting to use to read and write a file. Simplified solution was File.WriteAllText()/File.ReadAllText()
-                //string currentDirectory = Directory.GetCurrentDirectory();
-                //DirectoryInfo directory = new DirectoryInfo(currentDirectory);
-                //var fileName = Path.Combine(directory.FullName, "MostRecentWifiLog.txt");
-                //var mostRecentWifi = ReadFile(fileName);
-                //Console.WriteLine(mostRecentWifi);
-
-                //string mostRecentWifi = File.ReadAllText("MostRecentWifiLog.txt");
-                //Console.WriteLine(mostRecentWifi);
-
 
 
                 if (outcome == "ON" || outcome == "OFF")
@@ -118,22 +108,18 @@ namespace Wi_Fi_Drop_Fix
 
                 }
 
-                //Can't figure out a way to make the console open the picture in image viewer?? Non essential to completion, fix if time permits.
-                //else if (outcome == "HELP")
-                //{
-                //    string currentDirectory = Directory.GetCurrentDirectory();
-                //    DirectoryInfo directory = new DirectoryInfo(currentDirectory);
-                //    string helpFile = (directory + @"\Capture.JPG");
-                //    //Process.Start(directory + @"\Capture.JPG");
+                else if (outcome == "HELP")
+                {
 
+                    string currentDirectory = Directory.GetCurrentDirectory();
+                    DirectoryInfo directory = new DirectoryInfo(currentDirectory);
+                    // \" required to encapsulate the directory because /c was seeing a space in the directory as end of command and was failing. \" allows directory to be read as full string and fires code correctly.
+                    string img = "/c \"" + directory.FullName + "\\Help.JPG\"";
+                    Process.Start("CMD.exe", img);
 
-                //    File.Open("Capture.JPG", FileMode.Open);
-
-                //    string help = Path.GetFullPath(@"cd /d " + @directory + @"\Capture.JPG");
-                //    File.Open(help, FileMode.Open);
-                //    Process.Start("CMD.exe", help);
-                //    Process.Start("CMD.exe", @"\Capture.JPG");
-                //}
+                    string log = DateTime.Now.ToString() + " You consulted the HELP file. \r\n";
+                    File.AppendAllText("ActionLog.txt", log);
+                }
 
                 else if (outcome == "LOG")
                 {
@@ -153,14 +139,6 @@ namespace Wi_Fi_Drop_Fix
             }
         }
 
-        // Method to read most recent wi-fi name. Not necessary due to File.WriteAllText()
-        //public static string ReadFile(string fileName)
-        //{
-        //    using(var reader = new StreamReader(fileName))
-        //    {
-        //        return reader.ReadLine();
-        //    }
-        //}
 
         // Method to return answer for user outcome interface.
         static public string GetUserInput()
